@@ -29,13 +29,13 @@ void AMyActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-/*
+
 void AMyActor::PostActorCreated()
 {
 	Super::PostActorCreated();
 	CreateTriangle();
 }
-*/
+
 // This is called when actor is already in level and map is opened
 /*void AMyActor::PostLoad()
 {
@@ -43,7 +43,7 @@ void AMyActor::PostActorCreated()
 	//CreateTriangle();
 }
 */
-/*
+
 void AMyActor::CreateTriangle()
 {
 	TArray<FVector> vertices;
@@ -77,10 +77,9 @@ void AMyActor::CreateTriangle()
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 
-	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
+//	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
 	
 	// Enable collision data
-	mesh->ContainsPhysicsTriMeshData(true);
+//	mesh->ContainsPhysicsTriMeshData(true);
 }
 
-*/

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ProceduralMeshComponent.h"
 #include "MyActor.generated.h"
 
 
@@ -23,12 +24,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-//	void PostActorCreated();
+	void PostActorCreated();
 	//void PostLoad();
-//	void CreateTriangle();
-private:
-//	UPROPERTY(EditAnywhere)
-	//	UProceduralMeshComponent * mesh;
+	void CreateTriangle();
+
+	//UPROPERTY(EditAnywhere)
+		UProceduralMeshComponent * mesh;
 	
 	
 };
