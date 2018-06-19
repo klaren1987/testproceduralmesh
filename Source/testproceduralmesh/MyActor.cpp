@@ -3,16 +3,16 @@
 #include "MyActor.h"
 
 #include "ProceduralMeshComponent.h"
-#include "MyActor.generated.h"
+//#include "MyActor.generated.h"
 // Sets default values
 AMyActor::AMyActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	mesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("GeneratedMesh"));
-	RootComponent = mesh;
+	//mesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("GeneratedMesh"));
+	//RootComponent = mesh;
 	// New in UE 4.17, multi-threaded PhysX cooking.
-	mesh->bUseAsyncCooking = true;
+	//mesh->bUseAsyncCooking = true;
 
 }
 
@@ -29,19 +29,21 @@ void AMyActor::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+/*
 void AMyActor::PostActorCreated()
 {
 	Super::PostActorCreated();
 	CreateTriangle();
 }
-
+*/
 // This is called when actor is already in level and map is opened
-void AMyActor::PostLoad()
+/*void AMyActor::PostLoad()
 {
 	Super::PostLoad();
-	CreateTriangle();
+	//CreateTriangle();
 }
-
+*/
+/*
 void AMyActor::CreateTriangle()
 {
 	TArray<FVector> vertices;
@@ -81,3 +83,4 @@ void AMyActor::CreateTriangle()
 	mesh->ContainsPhysicsTriMeshData(true);
 }
 
+*/

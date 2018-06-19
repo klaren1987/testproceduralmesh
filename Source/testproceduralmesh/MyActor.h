@@ -23,12 +23,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	void PostActorCreated();
-	void PostLoad();
-	void CreateTriangle();
+//	void PostActorCreated();
+	//void PostLoad();
+//	void CreateTriangle();
 private:
-	UPROPERTY(EditAnywhere)
-		UProceduralMeshComponent * mesh;
+//	UPROPERTY(EditAnywhere)
+	//	UProceduralMeshComponent * mesh;
 	
 	
 };
