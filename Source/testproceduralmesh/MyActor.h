@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
+#include "ProceduralMeshComponent.h"
+#include "MyActor.generated.h"
 
 UCLASS()
 class TESTPROCEDURALMESH_API AMyActor : public AActor
@@ -22,7 +24,9 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	UPROPERTY(VisibleAnywhere)
+		UProceduralMeshComponent * mesh;
 	
 	
 };
