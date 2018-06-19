@@ -78,7 +78,7 @@ void AMyActor::CreateTriangle()
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 
 	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
-	
+	//test 
 	// Enable collision data
 	mesh->ContainsPhysicsTriMeshData(true);
 }
