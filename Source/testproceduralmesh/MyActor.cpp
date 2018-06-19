@@ -2,7 +2,8 @@
 
 #include "MyActor.h"
 
-
+#include "ProceduralMeshComponent.h"
+#include "MyActor.generated.h"
 // Sets default values
 AMyActor::AMyActor()
 {
@@ -75,7 +76,7 @@ void AMyActor::CreateTriangle()
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 
 	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
-
+	
 	// Enable collision data
 	mesh->ContainsPhysicsTriMeshData(true);
 }
