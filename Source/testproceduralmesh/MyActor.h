@@ -25,10 +25,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void PostActorCreated();
-	//void PostLoad();
+	void PostLoad();
 	void CreateTriangle();
 
-	//UPROPERTY(EditAnywhere)
+	UPROPERTY(EditAnywhere)
 		UProceduralMeshComponent * mesh;
 	
 	

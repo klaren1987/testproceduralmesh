@@ -9,10 +9,10 @@ AMyActor::AMyActor()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	//mesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("GeneratedMesh"));
-	//RootComponent = mesh;
+	mesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("GeneratedMesh"));
+	RootComponent = mesh;
 	// New in UE 4.17, multi-threaded PhysX cooking.
-	//mesh->bUseAsyncCooking = true;
+	mesh->bUseAsyncCooking = true;
 
 }
 
@@ -37,12 +37,12 @@ void AMyActor::PostActorCreated()
 }
 
 // This is called when actor is already in level and map is opened
-/*void AMyActor::PostLoad()
+void AMyActor::PostLoad()
 {
 	Super::PostLoad();
 	//CreateTriangle();
 }
-*/
+
 
 void AMyActor::CreateTriangle()
 {
@@ -77,9 +77,9 @@ void AMyActor::CreateTriangle()
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 	vertexColors.Add(FLinearColor(0.75, 0.75, 0.75, 1.0));
 
-//	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
+	mesh->CreateMeshSection_LinearColor(0, vertices, Triangles, normals, UV0, vertexColors, tangents, true);
 	
 	// Enable collision data
-//	mesh->ContainsPhysicsTriMeshData(true);
+	mesh->ContainsPhysicsTriMeshData(true);
 }
 
